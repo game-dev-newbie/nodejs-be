@@ -2,7 +2,7 @@
   "name": "learn-nodejs",
   "version": "1.0.0",
   "description": "Learn nodejs/expressJS for beginner",
-  "main": "server.js",
+  "main": "src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./src/server.js"
@@ -25,9 +25,12 @@
   },
   "homepage": "https://github.com/game-dev-newbie/nodejs-be#readme",
   "dependencies": {
-    "express": "^5.1.0"
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "express-handlebars": "^8.0.1"
   },
   "devDependencies": {
+    "morgan": "^1.10.1",
     "nodemon": "^3.1.10"
   }
 }
