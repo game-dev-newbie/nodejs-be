@@ -1,0 +1,33 @@
+{
+  "name": "learn-nodejs",
+  "version": "1.0.0",
+  "description": "Learn nodejs/expressJS for beginner",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/game-dev-newbie/nodejs-be.git"
+  },
+  "keywords": [
+    "nodejs",
+    "expressJS",
+    "miniApp",
+    "web",
+    "server"
+  ],
+  "author": "Game-dev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/game-dev-newbie/nodejs-be/issues"
+  },
+  "homepage": "https://github.com/game-dev-newbie/nodejs-be#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
