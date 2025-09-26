@@ -1,0 +1,49 @@
+<p class="title">Form edit user's info</p>
+<div class="container">
+  <div class="item">
+    <form action="/edit-user">
+
+      <label for="email">Your email original</label>
+      <input
+        type="text"
+        id="email"
+        name="email"
+        readonly
+        value="{{userId.email}}"
+      />
+
+      <label for="name">Your fullname original</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        readonly
+        value="{{userId.name}}"
+      />
+
+      <label for="city">Your city original</label>
+      <input
+        type="text"
+        id="city"
+        name="city"
+        readonly
+        value="{{userId.city}}"
+      />
+    </form>
+  </div>
+  <div class="item">
+    <form method="PUT" action="/edit-user">
+
+      <label for="email">Your email</label>
+      <input type="text" id="email" name="email" placeholder="Your email..." />
+
+      <label for="name">Your fullname</label>
+      <input type="text" id="name" name="name" placeholder="Your name..." />
+
+      <label for="city">Your city</label>
+      <input type="text" id="city" name="city" placeholder="Your city..." />
+
+      <input type="submit" value="Save" />
+    </form>
+  </div>
+</div>

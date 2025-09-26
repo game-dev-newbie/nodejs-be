@@ -1,1 +1,27 @@
-<h1>Hello world</h1>
+<h1>Hello world home page</h1>
+<div id="container">
+  <p style="font-size: 40px; text-align:center; margin:0">List Users</p>
+
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Email</th>
+      <th>Name</th>
+      <th>City</th>
+      <th>Action</th>
+    </tr>
+    {{#each users}}
+      <tr>
+        <td>{{this.id}}</td>
+        <td>{{this.email}}</td>
+        <td>{{this.name}}</td>
+        <td>{{this.city}}</td>
+        <td class="btn-group">
+          <a href="/edit/{{id}}" class="btn">Edit</a>
+          <a href="" class="btn">Delete</a>
+        </td>
+      </tr>
+    {{/each}}
+
+  </table>
+</div>

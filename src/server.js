@@ -1,23 +1,29 @@
+//import dotenv
+require("dotenv").config();
+//import express
 const express = require("express");
-const morgan = require("morgan");
-const path = require("path");
-const hbs = require("express-handlebars");
+//import config view engine
+const configViewEngine = require("./config/viewEngine");
 
+//import web routes
+const webRoutes = require("./routes/web");
+
+//create express app
 const app = express();
-const port = 8080;
-//Template engine handlebars
-//set extension file .hbs
-app.engine("hbs", hbs.engine({ extname: ".hbs" }));
-app.set("view engine", "hbs");
-//Thư mục chứa file view
-//__dirname: trả về đường dẫn tuyệt đối đến thư mục chứa file hiện tại
-app.set("views", path.join(__dirname, "resources", "views"));
 
-app.use(morgan("combined"));
-app.get("/", (req, res) => {
-  res.render("home");
-});
+//Set port and hostname
+const port = process.env.PORT;
+const hostname = process.env.HOST_NAME;
 
-app.listen(port, () => {
-  console.log(`Example app listening on port http://localhost:${port}`);
+
+
+//use function config view engine
+configViewEngine(app);
+
+//use web routes
+webRoutes(app);
+// app.use("/", webRoutes);
+
+app.listen(port, hostname, () => {
+  console.log(`Example app listening on port http://${hostname}:${port}`);
 });

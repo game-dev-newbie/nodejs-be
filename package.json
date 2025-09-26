@@ -2,6 +2,7 @@
   "name": "learn-nodejs",
   "version": "1.0.0",
   "description": "Learn nodejs/expressJS for beginner",
+ 
   "main": "src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -27,7 +28,8 @@
   "dependencies": {
     "dotenv": "^17.2.2",
     "express": "^5.1.0",
-    "express-handlebars": "^8.0.1"
+    "express-handlebars": "^8.0.1",
+    "mysql2": "^3.15.0"
   },
   "devDependencies": {
     "morgan": "^1.10.1",
